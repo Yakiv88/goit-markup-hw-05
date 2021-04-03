@@ -506,6 +506,88 @@ height: auto;
  
   } 
 
+.we-img {
+  position: relative;
+ /* padding: 10px 0px; */
+ display:block; 
+ text-decoration: none;
+  
+}
+
+.we-img::after {
+ display: block;
+  content: "";
+  position: absolute;
+  width: 370px; 
+  height: 70px ; 
+  left:0%;
+  bottom:-75%;
+  background-color: #2196F3;;
+  border-radius: 2px;
+   opacity:0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+ 
+
+
+/* --------КНОПКИ НА СЕКЦИИ МЫ НАЧАЛО-------- */
+
+
+
+
+.we-ul {
+  position: relative;
+}
+
+
+
+.button-we {
+  display:block;
+  position:absolute;
+  content: "";
+  left:0%;
+  bottom: 0%;
+  width:370px;
+  height: 70px;
+  transform: translate(0%,0%);
+  /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  border: none;
+}
+
+
+.button-we {
+font-family:700;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height:1.14px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase; 
+color: #FFFFFF; 
+background: rgba(47, 48, 58, 0.8);
+}
+
+
+.button-we-fist {
+left:0%;
+ bottom: 0%;
+  transform: translate(8.1%,0%);
+}
+
+
+.button-we-second {
+  left:0%;
+ bottom: 0%;
+  transform: translate(116.2%,0%);
+}
+
+
+.button-we-last{
+  left:0%;
+ bottom: 0%;
+  transform: translate(224.3%,0%);
+}
 
 
 
@@ -1131,7 +1213,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
  .project-li {
   position: relative;
-  
 }
 
   .card-trumb {
@@ -1139,10 +1220,10 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
    overflow: hidden;
  } 
   
-
+ 
   .kub {
   position: absolute;
-  content:;
+  content:"";
   left:0%;
   bottom:0%;
   width: 370px;
@@ -1240,7 +1321,4 @@ pointer-events: none;
   line-height: 1.36;
   /* align:center; */
   letter-spacing: 0.06em;
-  color:var(--header-color);
-} */
-
-
+  color:var(--header-color);} */
