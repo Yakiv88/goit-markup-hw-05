@@ -45,8 +45,8 @@ p {
 
 .header {
 
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color:var(--header-color);
   font-weight: 500;
   border-bottom:1px solid #ECECEC;
@@ -139,7 +139,7 @@ p {
   fill:#afb1b8
 }
 
- .link-icon-heder:hover,
+.link-icon-heder:hover,
 .link-icon-heder:focus {
   fill:var(--blue-color);
   cursor: pointer;
@@ -147,6 +147,10 @@ p {
   transform: scale(1.2);
 }
 
+.hd:hover {
+  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.2);
+}
 
 .link {
   text-decoration: none;
@@ -159,12 +163,6 @@ p {
 }
 .kontakt {
    color:var(--brand-letter);
-}
-
-
-.hd {
-padding-top:15px ;
-padding-bottom:15px ;
 }
 
 
@@ -193,53 +191,67 @@ padding-bottom:15px ;
   display:block
 }
 
-/* -----ПОЛОСА НА ТЕКУЩЕЙ СТРАНИЦУ СТУДИИ------ */
+/* -----ПОДЧЕРКИВАНИЕ НА ТЕКУЩЕЙ СТРАНИЦе СТУДИИ------ */
  
 
- 
-  
-   
- 
-.studia {
+  .studia {
   position: relative;
- padding: 10px 0px;
+ padding: 11px 0px;
  display:block; 
  text-decoration: none;
-  
+  color:var(--blue-color);
 }
+ 
+
+
+
 
 .studia::after {
- display: block;
+  display: block;
   content: "";
   position: absolute;
   width: 100%; 
   height: 4px ; 
   left:0%;
-  bottom:-60%;
-  background-color: #2196F3;;
+  bottom:-75%;
+  background-color: #2196F3;
   border-radius: 2px;
-   opacity:0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+   opacity:1;
+  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
- 
+
   .studia:hover::after {
-   opacity: 1;  
-    transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color:var(--blue-color);
+ transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(1.5);
 }   
 
-/* -----ПОЛОСА НА ТЕКУЩЕЙ СТРАНИЦУ ПОРТФОЛИО------  */
 
-.portfolio-line {
-  position: relative;
- padding: 10px 0px;
- display:block; 
- text-decoration: none;
-  
+/* обий клас текушей страницы смещение */
+.ddd:hover {
+ transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translatex(2px);
 }
 
+
+
+/* -----ПОЛОСА НА ТЕКУЩЕЙ СТРАНИЦУ ПОРТФОЛИО------  */
+ 
+
+
+
+.hd,.portfolio-line {
+position: relative;
+ padding: 14px 0px;
+ display:block; 
+ text-decoration: none;
+}
+
+.portfolio-line{color:var(--blue-color);}
+
+
 .portfolio-line::after {
- display: block;
+  display: block;
   content: "";
   position: absolute;
   width: 100%; 
@@ -248,23 +260,28 @@ padding-bottom:15px ;
   bottom:-75%;
   background-color: #2196F3;;
   border-radius: 2px;
-   opacity:0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  opacity:1;
+  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
  
   .portfolio-line:hover::after {
-   opacity: 1;  
-}   
+     color:var(--blue-color);
+ transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.5);
+}     
 
 
+ 
 
-/* -----ПОЛОСА НА ТЕКУЩЕЙ СТРАНИЦЕ КОНЕЦ------ */
+/* -----ПОЛОСА НА ТЕКУЩЕЙ СТРАНИЦЕ КОНЕЦ------  */
+
+ 
+
 
 
 /* Cекция герой */
 
 .hero {
-  
   padding-bottom:200px;
   padding-top: 200px;
   padding-left:1;
@@ -290,7 +307,6 @@ padding-right: 1;
   align-items: center;
   width: 1200px;
  padding-bottom: 0px;
- padding-top: 15px;
    margin-right: auto;
   margin-left: auto;
 }
@@ -304,13 +320,9 @@ padding-right: 1;
  .efect-hero-container  {
      padding-right:auto;
    padding-left: auto;
-   /* padding-right: 252px;
-   padding-left: 252px; */
   display: block;
   min-width: 696px;
   height: 120px;
-
-  margin-top:15px; 
   margin-bottom:30px ;
   padding-right: 265px;
   padding-left: 265px;
@@ -343,22 +355,19 @@ padding-right: 1;
   color:var(--header-color);
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border: none;
+  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
 
 }
 
 .button-hero:hover,
 .button-hero:focus {
   background-color:#2196F3;
-/* background-color: #2196F3; */
 border: none;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
-
-
-
-
 
 
 
@@ -948,7 +957,6 @@ margin-left: 0px;
 
 .hero-portfolio {
    background-color:var(--header-color);
- 
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -964,12 +972,19 @@ margin-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
-
+/* -----ЗАГОЛОВОК ПОРТФОЛИО------ */
 .portfolio-hero-name {
   padding: 0px;
   margin: 0px;
 }
 
+.visually-hidden {  position: absolute !important;  
+  clip: rect(1px 1px 1px 1px); 
+   clip: rect(1px, 1px, 1px, 1px);  padding: 0 !important; 
+  border: 0 !important;  height: 1px !important;  
+   width: 1px !important;  overflow: hidden;}
+
+   /* ------------------------------------ */
 
 .ul-button {
   display: flex;
@@ -1136,7 +1151,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 /* ------ТЕХНОКРЯК--------НАЧАЛО */
 
-
  .project-li {
   position: relative;
 }
@@ -1193,35 +1207,32 @@ padding: 63px 24px;
   left: 0;
 bottom: 0;
 right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); 
+opacity: 1;
+transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 
-.modal { 
+.modal  { 
 position: absolute;
 top: 50%;
 left: 50%;
-/* transform: translate(-50%,-50%); */
 transform: translate(-50%,-50%);
 height: 581px;
 width: 528px;
 background-color:#FFFFFF; 
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
-   /* transition-property: background-color, transform;
-  transition-duration: 5000ms;
-  transition-timing-function: linear;
-  transition-delay: 0;
- transition:transform 5550ms ;
-  transform: scale(2);  
- opacity:1;
-  */
+  
+opacity: 1;
+transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1)
 }
  
 
 .backdrop.is-hidden {
- 
  opacity:0;
 pointer-events: none;
+ 
  
 }
 
@@ -1237,18 +1248,18 @@ pointer-events: none;
   border-radius:50% ;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1); 
-   
  
 }
 
-
+ 
 
  .close-svg {
    display: inline;
   content: "";
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-color: #FFFFFF;
+  border-radius:50% ;
  }
 
  
